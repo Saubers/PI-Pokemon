@@ -1,0 +1,49 @@
+/* .paginado{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    color: blanchedalmond;
+    cursor: pointer;
+    font-size: 20px;
+} */
+.paginacion{
+  margin: 15px 0;
+  margin-right: 15px;
+  padding: 4px 10px;
+  display:flex;
+  justify-content: center;
+}
+
+.paginacion a{
+font-family: cursive;
+width: 60px;
+height:30px;
+line-height:20px;
+text-align:center;
+color: rgb(226, 21, 21);
+font-size:19px;
+font-weight:700px;
+transition: .2s linear;
+}
+
+.paginacion a:hover{
+  background-color:aliceblue;
+  color: red;
+  
+}
+
+.paginado{
+  color:black;
+  background-color: rgb(0, 0, 0);
+  display:flex;
+  position: relative;
+  overflow: hidden;
+
+  
+}
+
+.number{
+  display: inline-block;
+  letter-spacing: 20px;
+  justify-items: center;
+}

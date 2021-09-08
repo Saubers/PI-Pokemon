@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+*{
+        margin: 0;
+        padding: 0;
+}
+
+.body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('./Gengar.gif');
+    background-size: 90%;
+}
+
+.name, .image, .healthpoints, .attack, .defense, .speed, .height, .weight{
+    display: flex;
+    flex-direction: column;
+    border: 10px solid transparent;
+    padding: 10px 10px 0 10px;
+    color: white;
+    font-family: 'Press Start 2P', cursive;
+    align-items: center;
+}
+
+.create{
+    color: red;
+    font-family: 'Press Start 2P', cursive;
+    position: absolute;
+    top: 30px;
+}
+
+.link{
+    color:ivory;
+    position:fixed;
+    bottom:2px;
+    font-family:monospace;
+    font-size: 26px;
+}
+
+.select{
+    color: white;
+    background-color: black;
+    font-family:cursive;
+    font-size:16px
+}
+
+.button{
+    color: white;
+    background-color: black;
+    display:inline;
+    justify-content:space-between 15px;
+    font-family:'Press Start 2P';
+    font-size:25px;
+    
+}

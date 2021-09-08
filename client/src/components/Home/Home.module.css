@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.home{
+    min-height: 100vh;
+    background-image: url('./pokemon.jpg');
+    background-size: 100%;
+}
+
+.cargando{
+    font-family:cursive;
+    color:aliceblue
+}
+
+.link{
+    font-family:cursive;
+    color:aliceblue;
+    font-size:20px; 
+}
+
+.title{
+    font-family:'Press Start 2P', cursive;
+    color:red
+}
+
+.button, .sorting{
+    font-family:cursive;
+    font-size: 15px;
+    background-color:black;
+    color:white;
+}

@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.landing{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-image: url('pikachu.gif');
+    background-size: 100%;
+}
+
+.title{
+    font-family:'Press Start 2P', cursive;
+    color: whitesmoke;
+    display:flex;
+    position:fixed;
+    top: 4px;
+}
+
+.button{
+    display:flex;
+    position:fixed;
+    top: 42px;
+    left: 710px;;
+    color: black;
+    background-color:plum;
+    font-family:cursive;
+    font-size:30px
+}

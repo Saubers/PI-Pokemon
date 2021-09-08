@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+.detailContainer{
+    min-height: 100vh;
+    background-image: url('./pokedex.gif');
+    background-size: 100%;
+}
+
+.type{
+    text-transform: capitalize;
+}
+.text{
+    text-transform: capitalize;
+    font-family: 'Press Start 2P', cursive;
+    display:flex;
+    position:relative;
+    bottom: -60px;
+    left:400px
+    
+}
+.healthpoints, .attack, .defense, .speed, .height, .weight, .id{
+    display: flex;
+    flex-direction: column;
+    border: 10px solid transparent;
+    padding: 10px 10px 0 10px;
+    color: black;
+    font-family: 'Press Start 2P', cursive;
+    text-align: center;
+    position:relative;
+    bottom: 150px;
+    right: 200px
+    
+}
+
+.pokemonImg{
+    width: 270px;
+    height: 270px;
+    display:flex;
+    position:relative;
+    left: 1150px;
+    
+}
+.typeImg{
+    width: 150px;
+    height: 150px;
+    display:flex;
+    position:relative;
+    bottom: 400px;
+    right: -200px;
+
+}
+
+.typeName{
+    font-family:cursive;
+    font-size: 20px;
+    color:black;
+    display:flex;
+    position:relative;
+    bottom: 400px;
+    right: -250px;
+}
+
+.link{
+    font-family:cursive;
+    font-size: 20px;
+    color:black;
+    display:flex;
+    position:relative;
+    bottom:310px;
+    left:500px
+
+}
