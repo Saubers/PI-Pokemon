@@ -47,7 +47,7 @@ export default function Home() {
 
   function handleClick(el) {
     el.preventDefault();
-    dispatch(getTypes());
+    dispatch(getPokemons())
     dispatch(reloadPokemons());
   }
 
@@ -73,7 +73,7 @@ export default function Home() {
   }
 
   return loading ? (
-    <div className={styles.cargando}>"Cargando..."</div>
+    <div className={styles.cargando}>Cargando...</div>
   ) : (
     <div className={styles.home}>
       <div>
@@ -82,9 +82,7 @@ export default function Home() {
         </Link>
       </div>
       <h1 className={styles.title}>POKÉMON</h1>
-      <button
-      value="All"
-        className={styles.button}
+      <button className={styles.button}
         onClick={(el) => {
           handleClick(el);
         }}
@@ -145,7 +143,7 @@ export default function Home() {
               </Link>
             </div>
           ) : (
-            <div className={styles.cargando}>"Cargando..."</div>
+            <div className={styles.cargando}>Cargando...</div>
           )}
         </div>
       </div>

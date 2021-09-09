@@ -44,19 +44,19 @@ function rootReducer(state = initialState, action) {
         ...state,
         pokemons: typeFiltered,
       };
-    case "FILTER_BY_CREATION":
+    case "FILTER_CREATED":
       const allPokemons2 = state.allPokemons;
       const creationFiltered =
         action.payload === "created"
-          ? allPokemons2?.filter((el) => el.id.length > 10)
-          : allPokemons2?.filter((el) => el.id < 50);
+          ? allPokemons2?.filter((el) => el.createdInDB)
+          : allPokemons2?.filter((el) => !el.createdInDB);
       return {
         ...state,
         pokemons: action.payload === "All" ? allPokemons2 : creationFiltered,
       };
     case "ORDER_BY_NAME":
       let sortedArr =
-        action.payload === "asc_alf"
+        action.payload === "ascAlf"
           ? state.pokemons.sort(function (a, b) {
               if (a.name > b.name) {
                 return 1;
@@ -81,7 +81,7 @@ function rootReducer(state = initialState, action) {
       };
     case "ORDER_BY_ATTACK":
       let sortedArr2 =
-        action.payload === "asc_fu"
+        action.payload === "ascStr"
           ? state.pokemons.sort(function (a, b) {
               if (a.attack > b.attack) {
                 return -1;

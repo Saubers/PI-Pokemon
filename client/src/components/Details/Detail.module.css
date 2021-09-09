@@ -15,7 +15,7 @@
     display:flex;
     position:relative;
     bottom: -60px;
-    left:400px
+    left:420px
     
 }
 .healthpoints, .attack, .defense, .speed, .height, .weight, .id{
@@ -33,12 +33,12 @@
 }
 
 .pokemonImg{
-    width: 270px;
-    height: 270px;
+    width: 200px;
+    height: 200px;
     display:flex;
     position:relative;
-    left: 1150px;
-    
+    left: 1190px;
+    bottom:-40px
 }
 .typeImg{
     width: 150px;
@@ -46,7 +46,7 @@
     display:flex;
     position:relative;
     bottom: 400px;
-    right: -200px;
+    right: -90px;
 
 }
 
@@ -57,7 +57,7 @@
     display:flex;
     position:relative;
     bottom: 400px;
-    right: -250px;
+    right: -145px;
 }
 
 .link{
@@ -67,6 +67,6 @@
     display:flex;
     position:relative;
     bottom:310px;
-    left:500px
+    left:540px
 
 }
