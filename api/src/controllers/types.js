@@ -1,6 +1,5 @@
 const { Pokemon, Type } = require("../db");
 const { default: axios } = require("axios");
-const { v4: uuidv4 } = require("uuid");
 
 
 async function getTypes(req, res, next) {

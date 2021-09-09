@@ -1,6 +1,7 @@
 const axios = require('axios');
 const { Pokemon, Type } = require('../db');
-
+const {updateTypes} = require('./types')
+const { v4: uuidv4 } = require("uuid");
 
 async function getPokemonByName(req, res, next) {
   const { name } = req.query;
