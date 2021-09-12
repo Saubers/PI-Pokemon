@@ -115,7 +115,9 @@ export default function CharacterCreate() {
             onChange={(el) => {
               handleInputChange(el);
               validateInput(el);;
+              
             }}
+            required={true}
             type="text"
             name="name"
             value={input.name}

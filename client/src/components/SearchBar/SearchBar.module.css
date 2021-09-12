@@ -4,9 +4,13 @@
    height: 20px;
 }
 .button{
-    background-color:black;
+    cursor: pointer;
     color:aliceblue;
     width: 70px;
-    height: 20px;
+    height: 25px;
     font-family: cursive;
+    border-width: 3px;
+    border-style:groove;
+    border-radius: 2px;
+    background-color:rgb(131, 43, 131);
 }

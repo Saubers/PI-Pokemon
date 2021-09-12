@@ -57,7 +57,7 @@ function rootReducer(state = initialState, action) {
     case "ORDER_BY_NAME":
       let sortedArr =
         action.payload === "ascAlf"
-          ? state.pokemons.sort(function (a, b) {
+          ? state.pokemons?.sort(function (a, b) {
               if (a.name > b.name) {
                 return 1;
               }
@@ -66,7 +66,7 @@ function rootReducer(state = initialState, action) {
               }
               return 0;
             })
-          : state.pokemons.sort(function (a, b) {
+          : state.pokemons?.sort(function (a, b) {
               if (a.name > b.name) {
                 return -1;
               }
@@ -81,25 +81,30 @@ function rootReducer(state = initialState, action) {
       };
     case "ORDER_BY_ATTACK":
       let sortedArr2 =
-        action.payload === "ascStr"
-          ? state.pokemons.sort(function (a, b) {
-              if (a.attack > b.attack) {
-                return -1;
-              }
-              if (a.attack < b.attack) {
-                return 1;
-              }
-              return 0;
-            })
-          : state.pokemons.sort(function (a, b) {
-              if (a.attack > b.attack) {
-                return 1;
-              }
-              if (a.attack < b.attack) {
-                return -1;
-              }
-              return 0;
-            });
+      action.payload === "ascStr"
+        ? state.pokemons?.sort(function (a, b) {
+            if (a.attack > b.attack) {
+              return -1;
+            }
+            if (a.attack < b.attack) {
+              return 1;
+            }
+            return 0;
+          })
+        : state.pokemons?.sort(function (a, b) {
+            if (a.attack > b.attack) {
+              return 1;
+            }
+            if (a.attack < b.attack) {
+              return -1;
+            }
+            return 0;
+          });
+      let allPokemons4 = state.pokemons;
+      let allOptions = action.payload === "All" ?
+      allPokemons4
+      : sortedArr2;
+
       return {
         ...state,
         pokemons: sortedArr2,

@@ -1,29 +1,46 @@
+@font-face {font-family:"Pokemon Solid Normal"; src:url("pokemonsolid.eot") 
+    format("eot"),url("pokemonsolid.woff") format("woff");
+    font-weight:normal;
+    font-style:normal;
+    font-size: 10px;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
 
 .landing{
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-image: url('pikachu.gif');
+    background-image: url('landinpokemon.jpg');
     background-size: 100%;
 }
 
 .title{
-    font-family:'Press Start 2P', cursive;
-    color: whitesmoke;
+    font-family: 'Pokemon Solid';
+    letter-spacing:2px;
+    font-size: 45px;
+    color:rgb(212, 147, 147);
     display:flex;
     position:fixed;
-    top: 4px;
+    justify-content: space-around;
+    align-items:center;
+    top: -3px;
 }
 
 .button{
-    display:flex;
-    position:fixed;
-    top: 42px;
-    left: 710px;;
-    color: black;
-    background-color:plum;
-    font-family:cursive;
-    font-size:30px
+    cursor:pointer;
+    position:flex;
+    justify-content:space-around;
+    align-items: center;
+    color: aliceblue;
+    font-family:'Press Start 2P', cursive;
+    background-color:rgb(136, 0, 79) ;
+    border-width: 5px;
+    border-radius: 10px;
+    border-collapse: separate;
+    border-spacing: 10px 15px;
+    font-size:45px;
+    
 }

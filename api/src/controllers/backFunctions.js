@@ -54,13 +54,13 @@ async function getPokemonByName(req, res, next) {
 
 async function getApiInfo(_req, _res, next) {
     try {
-      const API_Answer = await axios.get(
+      const APIanswer = await axios.get(
         "https://pokeapi.co/api/v2/pokemon?limit=40"
       );
-      const API_Pokemons = [];
-      for await (const element of API_Answer.data.results) {
-        const r = await axios.get(element.url);
-        const apiInfo = r.data;
+      const APIpokemons = [];
+      for await (const element of APIanswer.data.results) {
+        const response = await axios.get(element.url);
+        const apiInfo = response.data;
   
         const pokemon = {
           id: apiInfo.id,
@@ -78,9 +78,9 @@ async function getApiInfo(_req, _res, next) {
             image: `https://typedex.app/types/${el.type.name}.png`,
           })),
         };
-        API_Pokemons.push(pokemon);
+        APIpokemons.push(pokemon);
       }
-      return API_Pokemons;
+      return APIpokemons;
     } catch {
       (err) => {
         console.log("An error has been detected at requestPokemons.");

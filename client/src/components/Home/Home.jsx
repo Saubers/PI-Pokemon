@@ -25,8 +25,9 @@ export default function Home() {
   const allTypes = useSelector((state) => state.types);
 
   const [currentPage, setCurrentPage] = useState(1);
-  const [orden, setOrden] = useState("");
-  const [orden2, setOrden2] = useState("");
+  const [order, setOrder] = useState("");
+  const [orden2, setOrder2] = useState("");
+
   const [pokemonsPerPage, setPokemonsPerPage] = useState(9);
   const indexOfLastPokemon = currentPage * pokemonsPerPage;
   const indexOfFirstPokemon = indexOfLastPokemon - pokemonsPerPage;
@@ -49,6 +50,7 @@ export default function Home() {
     el.preventDefault();
     dispatch(getPokemons())
     dispatch(reloadPokemons());
+
   }
 
   function handleFilterTypes(el) {
@@ -62,18 +64,18 @@ export default function Home() {
     el.preventDefault();
     dispatch(orderByName(el.target.value));
     setCurrentPage(1);
-    setOrden(`Ordenado ${el.target.value}`);
+    setOrder(`Ordenado ${el.target.value}`);
   }
 
   function handleSortAtt(el) {
     el.preventDefault();
     dispatch(orderByAttack(el.target.value));
     setCurrentPage(1);
-    setOrden2(`Ordenado ${el.target.value}`);
+    setOrder2(`Ordenado ${el.target.value}`);
   }
 
   return loading ? (
-    <div className={styles.cargando}>Cargando...</div>
+    <img src="https://media4.giphy.com/media/z8OcWLLk4SrpS/giphy.gif?cid=790b7611866c8068e3bd90c2d6e4a99be28eb1f7fdbe0e3b&rid=giphy.gif&ct=s" alt="no se ha encontrado..." className={styles.cargando}></img>
   ) : (
     <div className={styles.home}>
       <div>
@@ -96,6 +98,7 @@ export default function Home() {
             <option value="descAlf">Descendente alfabetico</option>
           </select>
           <select className={styles.sorting} onChange={(el) => handleSortAtt(el)}>
+            <option value="All"> </option>
             <option value="ascStr">Ascendente por fuerza</option>
             <option value="descStr">Descendente por fuerza</option>
           </select>
@@ -143,7 +146,7 @@ export default function Home() {
               </Link>
             </div>
           ) : (
-            <div className={styles.cargando}>Cargando...</div>
+            <img src={"https://media4.giphy.com/media/z8OcWLLk4SrpS/giphy.gif?cid=790b7611866c8068e3bd90c2d6e4a99be28eb1f7fdbe0e3b&rid=giphy.gif&ct=s"} alt="no se ha encontrado..." className={styles.cargando}></img>
           )}
         </div>
       </div>
